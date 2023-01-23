@@ -37,25 +37,25 @@ To predict the property assessed tax values for single-family homes for Zillow i
 
 **Initial Hypotheses :  
 
-1. 
-Null Hypothesis : The total square feet of the property has no influence on tax value.
-Alternative Hypothesis :  The total square feet of the property has an influence on tax value.
---- Statistical testing indicated that there wass a relationship between property total square footage and tax value.
+1.  
+Null Hypothesis : The total square feet of the property has no influence on tax value.  
+Alternative Hypothesis :  The total square feet of the property has an influence on tax value.  
+--- Statistical testing indicated that there wass a relationship between property total square footage and tax value.  
 
-2. 
-Null Hypothesis : The number of bathrooms has no influence on tax value.
-Alternative Hypothesis : The number of bathrooms has an influence on tax value.
---- Statistical testing indicated that there was a only a very distant relationship between number of bathrooms and tax value.
+2.  
+Null Hypothesis : The number of bathrooms has no influence on tax value.  
+Alternative Hypothesis : The number of bathrooms has an influence on tax value.  
+--- Statistical testing indicated that there was a only a very distant relationship between number of bathrooms and tax value.  
 
-3. 
-Null Hypothesis : The number of bedrooms has no influence on tax value.
-Alternative Hypothesis :  The number of bedrooms has an influence on tax value.
---- Statistical testing indicated that there was a only a very distant relationship between number of bedrooms and tax value.
+3.   
+Null Hypothesis : The number of bedrooms has no influence on tax value.  
+Alternative Hypothesis :  The number of bedrooms has an influence on tax value.  
+--- Statistical testing indicated that there was a only a very distant relationship between number of bedrooms and tax value.  
 
-4. 
-Null Hypothesis :  County of property has no influence on tax value.
-Alternative Hypothesis : County of property has an influence on tax value. 
---- Statistical testing indicated that there was a only a very distant relationship between the county FIPS code and the tax value.
+4.  
+Null Hypothesis :  County of property has no influence on tax value.  
+Alternative Hypothesis : County of property has an influence on tax value.    
+--- Statistical testing indicated that there was a only a very distant relationship between the county FIPS code and the tax value.  
 
 
 
