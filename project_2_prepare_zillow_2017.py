@@ -33,8 +33,11 @@ def prep_zillow(zil):
                                 'fips' : 'county_fips'})
 
     # dropping unnecessary columns 'propertylandusetypeid' and 'Unnamed: 0'
-    zil = zil.drop(columns = ['parcelid'], axis = 0)
-
+    zil = zil.drop(columns = ['Unnamed: 0','date_sold','parcelid'], axis = 0)
+    
+    # casting the FIPS column as an integer
+    zil = zil.astype({'county_fips':'int64'})
+    
     # filling na spaces with 0
     zil = zil.fillna(0)
     
@@ -46,6 +49,9 @@ def prep_zillow(zil):
 
     # dropping houses with 0 tax value
     zil = zil[zil.tax_val > 0]
+    
+    # dropping houses with a tax value of more than $2 mil
+    zil = zil[zil.tax_val <= 2_000_000]
     
     #drop duplicates
     zil.drop_duplicates(inplace = True)
@@ -85,7 +91,7 @@ def tts_xy(train, val, test, target):
     
     '''
     This function splits train, val, test into X_train, X_val, X_test
-    (the dataframe of features, exludes the target variable 'survived') 
+    (the dataframe of features, exludes the target variable) 
     and y-train (target variable), etc
     '''
 
@@ -100,3 +106,4 @@ def tts_xy(train, val, test, target):
     X_test = test.drop(columns = [target])
     y_test = test[target]
 
+    return X_train, y_train, X_val, y_val, X_test, y_test
